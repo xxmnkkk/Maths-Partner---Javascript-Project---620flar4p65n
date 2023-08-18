@@ -1,1 +1,68 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Partner - MNK</title>
+    <link rel="stylesheet" href="/Maths-Partner---Javascript-Project---620flar4p65n/styles.css">
+    <script src="/Maths-Partner---Javascript-Project---620flar4p65n/App.js" defer></script>
+    <script src="https://kit.fontawesome.com/0ab754fc52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-section">
+            <h1 id="title">Math Partner</h1>
+           
+            <!-- <input class="nav-button" type="button" id="history-button" value="HISTORY"> -->
+            <input class="nav-button" type="button" id="saved-button" value="SAVED SOLUTIONS">
+        </div>
+
+        <div class="history-box">
+ 
+        </div>
+    </nav>
+
+    <main>
+        <div class="input-section">
+            <div class="container">
+                <label for="input-bar">Problem Statement</label>
+                <input type="text" id="input-bar" name="input-bar" placeholder="Type the problem here.....">
+            </div>
+
+            <div class="container">
+                <label for="select-option">Select Category</label>
+                <select name="select-option" id="select-option">
+                    <option value="simplify">Simplify</option>
+                    <option value="factor">Factor</option>
+                    <option value="derive">Derive</option>
+                    <option value="integrate">Integrate</option>
+                    <option value="find0s">Find 0's</option>
+                    <option value="findTangent">Find Tangent</option>
+                    <option value="areaUnderCurve">Area Under Curve	</option>
+                    <option value="cosine">Cosine</option>
+                    <option value="sine">Sine</option>
+                    <option value="tangent">Tangent</option>
+                    <option value="inverseCosine">Inverse Cosine	</option>
+                    <option value="inverseSine">Inverse Sine</option>
+                    <option value="inverseTangent">Inverse Tangent</option>
+                    <option value="absoluteValue">Absolute Value</option>
+                    <option value="logarithm">Logarithm</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <button type="submit" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="result-box" id="result-box">
+
+            </div>
+
+            <button type="reset" id="delete-button"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </main>
+</body>
+</html>
