@@ -32,14 +32,14 @@ async function search() {
 }
   
 function saveResultToLocalStorage(operation, expression, result) {
-  const savedResults = JSON.parse(localStorage.getItem("savedResults"));
+  const savedResults = JSON.parse(localStorage.getItem("savedResults")) || [];
   savedResults.push({ operation, expression, result });
   localStorage.setItem("savedResults", JSON.stringify(savedResults));
   loadSavedResults();
 }
 
 function loadSavedResults() {
-  const savedResults = JSON.parse(localStorage.getItem("savedResults"));
+  const savedResults = JSON.parse(localStorage.getItem("savedResults")) || [];
   const historyBox = document.querySelector(".history-box");
   
   historyBox.innerHTML = savedResults.map((savedResult, index) => `
@@ -57,7 +57,7 @@ function loadSavedResults() {
 }
   
 function deleteHistoryEntry(event) {
-  const indexToRemove = parseInt(event.target.getAttribute("data-index"));
+  const indexToRemove = parseInt(event.target.getAttribute("data-index")) || [];
   const savedResults = JSON.parse(localStorage.getItem("savedResults"));
   savedResults.splice(indexToRemove, 1);
   localStorage.setItem("savedResults", JSON.stringify(savedResults));
